@@ -1,0 +1,869 @@
+/* ---------- common ---------- */
+.con1170{width: 73.125rem; margin: 0 auto;}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    z-index: -1;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f3f6f8;
+}
+
+
+
+/* --- wrap --- */
+#wrap{}
+
+
+
+/* ---------- header - common ---------- */
+#header{
+    width: 100%;
+    height: 7.8125rem;
+    background-color: #fff;
+}
+.headerInner{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.topInfo{
+    position: absolute;
+    top: 1rem; right: 0;
+    display: flex;
+}
+.topInfo li{}
+.topInfo li a{
+    display: block;
+    font: 400 .875rem 'Noto Sans KR', sans-serif;
+    color: #8d8d8d;
+}
+.topInfo li a::after{
+    content: '';
+    display: inline-block;
+    width: 1px; height: 10px;
+    margin: 0 10px;
+    background-color: #cecece;
+    cursor: default;
+}
+.topInfo li:last-child a::after{display: none;}
+.logo{}
+.logo a{
+    display: block;
+    font-size: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-20%);
+}
+.logo a img{}
+.menu{}
+.navList{
+    position: relative;
+    top: 50%;
+    transform: translateY(-20%);
+}
+.navList a{
+    font: 500 1.125rem 'Noto Sans KR', sans-serif;
+    color: #07172a;
+    padding: .3125rem .625rem;
+    margin-right: 1.375rem;
+}
+.menu a:last-child{margin-right: 0rem;}
+.rightInfo{}
+.infoList{
+    position: relative;
+    top: 50%;
+    transform: translateY(-30%);
+    display: flex;
+    align-items: center;
+}
+.search{}
+.search form{}
+.search form fieldset{
+    position: relative;
+    width: 13.375rem; height: 2.75rem;
+}
+.search form fieldset input{
+    width: 100%; height: 100%;
+    padding: 0 2.8125rem 2px 1.25rem;
+    border: .0625rem solid #000;
+    border-radius: 2.75rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    font: 400 1rem 'Noto Sans KR', sans-serif;
+}
+.search form fieldset input::placeholder{
+    font: 400 1rem 'Noto Sans KR', sans-serif;
+    color: #777;
+}
+.searchBtn{   
+    width: 1.25rem; height: 1.25rem;
+    border: 0;
+    background: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%; right: .9375rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: url(../img/sprite.png) no-repeat 0 0;
+}
+.lang{
+    width: 1.875rem; height: 1.875rem;
+    margin: 0 1.875rem 0 1.25rem;
+    position: relative;
+}
+.lang button{
+    border: none;
+    background: none;
+    padding: 0;
+}
+.lang button span{
+    display: block;
+    text-indent: -9999px;
+    font-size: 0;
+}
+.lang button span::before{
+    content: "";
+    position: absolute;
+    width: 1.25rem; height: 1.25rem;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../img/sprite.png) no-repeat 0 0;
+    background-position: -30px 0;
+    cursor: pointer;
+}
+.popup{
+    width: 1.875rem; height: 1.875rem;
+    position: relative;
+}
+.popup button{
+    border: none;
+    background: none;
+    padding: 0;
+}
+.popup button span{
+    display: block;
+    text-indent: -9999px;
+    font-size: 0;
+}
+.popup button span::before{
+    content: "";
+    position: absolute;
+    width: 1.0625rem; height: 1rem;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../img/sprite.png) no-repeat 0 0;
+    background-position: -60px 0;
+    cursor: pointer;
+}
+.langPopup{
+    position: absolute;
+    top: 95px; right: 35px;
+    width: 80px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 10px 0;
+    z-index: 100 !important;
+    display: none;
+}
+.langPopup::before{
+    content: "";
+    position: absolute;
+    top: -7px; left: 50%;
+    transform: translateX(-50%);
+    width: 12px; height: 9px;
+    background: url(../img/sprite.png) no-repeat -130px -10px;
+}
+.langPopup li{}
+.langPopup li a{
+    display: block;
+    font: 400 .875rem 'Noto Sans KR', sans-serif;
+    text-align: center;
+    color: #000;
+    padding: 7px 0;
+}
+.langPopup.active{display: block;}
+
+
+
+/* ---------- main ---------- */
+#content{padding: 1.625rem 0;}
+
+
+
+/* ---------- section1 - visual ---------- */
+.visual{
+    background-color: #fff;
+    border-radius: 1.5625rem;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    position: relative;
+    box-sizing: border-box;
+}
+.slideWrap{
+    width: 100%; height: 23.5625rem;
+    position: relative;
+}
+.slide{}
+.s1T1{
+    font: 500 1.875rem 'Noto Sans KR', sans-serif;
+    color: #000;
+    display: block;
+    position: absolute;
+    top: 70px; left: 210px;
+    transition: left ease-in-out 1s;
+}
+.s1T2{
+    font: 500 3.375rem 'Noto Sans KR', sans-serif;
+    color: #000;
+    display: block;
+    position: absolute;
+    top: 110px; left: 210px;
+    transition: left ease-in-out 1.5s;
+}
+.s1T3{
+    font: 400 1.375rem 'Noto Sans KR', sans-serif;
+    color: #5f626a;
+    display: block;
+    position: absolute;
+    top: 190px; left: 210px;
+    transition: left ease-in-out 2s;
+}
+.s1Btn{
+    font: 400 1.0625rem 'Noto Sans KR', sans-serif;
+    color: #006ddf;
+    display: block;
+    position: absolute;
+    top: 230px; left: 210px;
+    transition: left ease-in-out 2.5s;
+}
+.s1Btn::after{
+    content: '';
+    display: inline-block;
+    background: url(../img/sprite.png) no-repeat -150px 0;
+    width: 7px; height: 11px;
+    margin-left: 5px;
+}
+.s1Btn:hover{text-decoration: underline;}
+.s1Img{
+    display: block;
+    background: url(../img/sprite.png) no-repeat;
+    background-position: -470px -230px;
+    width: 540px;
+    height: 368px;
+    position: absolute;
+    margin-right: 60px;
+    right: -10px; bottom: 0;
+    transition: right ease-in 2s;
+}
+.s2T1{
+    font: 500 1.875rem 'Noto Sans KR', sans-serif;
+    color: #000;
+    display: block;
+    position: absolute;
+    top: 70px; left: 210px;
+    transition: left ease-in-out 1s;
+}
+.s2T2{
+    font: 500 3.375rem 'Noto Sans KR', sans-serif;
+    color: #000;
+    display: block;
+    position: absolute;
+    top: 110px; left: 210px;
+    transition: left ease-in-out 1.5s;
+}
+.s2T3{
+    font: 400 1.375rem 'Noto Sans KR', sans-serif;
+    color: #5f626a;
+    display: block;
+    position: absolute;
+    top: 190px; left: 210px;
+    transition: left ease-in-out 2s;
+}
+.s2Btn{
+    font: 400 1.0625rem 'Noto Sans KR', sans-serif;
+    color: #006ddf;
+    display: block;
+    position: absolute;
+    top: 230px; left: 210px;
+    transition: left ease-in-out 2.5s;
+}
+.s2Btn::after{
+    content: '';
+    display: inline-block;
+    background: url(../img/sprite.png) no-repeat -150px 0;
+    width: 7px; height: 11px;
+    margin-left: 5px;
+}
+.s2Btn:hover{text-decoration: underline;}
+.s2Img{
+    display: block;
+    background: url(../img/sprite.png) no-repeat;
+    background-position: -470px -630px;
+    width: 456px; height: 306px;
+    position: absolute;
+    margin-right: 60px;
+    margin-bottom: 30px;
+    right: -10px; bottom: 0;
+    transition: right ease-in-out 2s;
+}
+.swiper-slide-active .motionContent1{left: 70px;}
+.swiper-slide-active .motionContent2{left: 70px;}
+.swiper-slide-active .motionContent3{left: 70px;}
+.swiper-slide-active .motionContent4{left: 70px;}
+.swiper-slide-active .motionContent5{right: 20px;}
+.swiper-pagination{
+    position: absolute;
+    left: 70px !important; bottom: 70px !important;
+    width: inherit !important;
+}
+.swiper-pagination-bullet{
+    width: 10px; height: 10px;
+    margin: 0 !important;
+    margin-right: .625rem !important;
+}
+.swiper-pagination-bullet-active{background-color: #000;}
+.player{
+    position: absolute;
+    left: 113px; bottom: 74px;
+    z-index: 10;
+}
+.player button{
+    background: url(../img/sprite.png) no-repeat;
+    border: none;
+    background-color: none;
+    padding: 0;
+    cursor: pointer;
+    display: none;
+}
+.player .pause{
+    background-position: -130px 0px;
+    width: 9px; height: 9px;
+}
+.player .play{
+    background-position: -120px 0px;
+    width: 8px; height: 11px;
+}
+.player button.active{display: block;}
+
+
+
+/* ---------- section2 - quick ---------- */
+.quick{
+    margin-top: 1.5625rem;
+    padding: 1.5625rem;
+    box-sizing: border-box;
+    border-radius: 1.5625rem;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+.quickList{
+    display: flex;
+    justify-content: space-between;
+}
+.quickList li{}
+.quickList li:first-child{margin-left: 2.5rem;}
+.quickList li:last-child{margin-right: 2.5rem;}
+.quickList li a{
+    display: block;
+    font: 500 1.5625rem 'Noto Sans KR', sans-serif;
+    color: #000;
+    padding: .875rem .9375rem;
+}
+.quickList li a:hover{color: #006ddf;}
+
+
+
+/* ---------- section3 - banner ---------- */
+.banner{margin-top: 1.5625rem;}
+.bannerList{
+    display: flex;
+    justify-content: space-between;
+}
+.bannerList li{
+    width: 17.0625rem; height: 8.3125rem;
+    border-radius: 1.5625rem;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+.bannerList li:hover{background-color: #006ddf;}
+.bannerList li:hover>.bgPositionCard>div>*{color: #fff;}
+.bgPositionCard{
+    position: relative;
+    width: 100%; height: 100%;
+    display: block;
+}
+.bgPositionCard div{
+    position: absolute;
+    top: 50%; right: 0;
+    transform: translateY(-50%);
+    width: 10.125rem;
+}
+.bgPositionCard div h3{
+    font: 700 1.125rem 'Noto Sans KR', sans-serif;
+    color: #000;
+    margin-bottom: .375rem;
+    display: block;
+}
+.bgPositionCard div p{
+    font: 400 .9375rem 'Noto Sans KR', sans-serif;
+    color: #000;
+    display: block;
+}
+.house::before{
+    position: absolute;
+    top: 50%; left: 2.5rem;
+    transform: translateY(-50%);    
+    content: '';
+    display: block;
+    width: 76px; height: 46px;
+    background: url(../img/sprite.png) no-repeat;
+    background-position: 0 -40px;
+}
+.ring::before{
+    position: absolute;
+    top: 50%; left: 2.5rem;
+    transform: translateY(-50%);    
+    content: '';
+    display: block;
+    width: 65px; height: 47px;
+    background: url(../img/sprite.png) no-repeat;
+    background-position: -80px -40px;
+}
+.chart::before{
+    position: absolute;
+    top: 50%; left: 2.5rem;
+    transform: translateY(-50%);    
+    content: '';
+    display: block;
+    width: 70px; height: 58px;
+    background: url(../img/sprite.png) no-repeat;
+    background-position: -160px -40px;
+}
+.book::before{
+    position: absolute;
+    top: 50%; left: 2.5rem;
+    transform: translateY(-50%);    
+    content: '';
+    display: block;
+    width: 79px; height: 48px;
+    background: url(../img/sprite.png) no-repeat;
+    background-position: -240px -40px;
+}
+
+
+
+/* ---------- section4 - notice ---------- */
+.notice{
+    margin-top: 1.5625rem;
+    display: flex;
+    justify-content: space-between;
+}
+.boardBox{
+    box-sizing: border-box;
+    width: 42.9375rem;
+    padding: 3.75rem;
+    background-color: #fff;
+    border-radius: 1.5625rem;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+.bControl{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.875rem;
+}
+.bControl div{}
+.bControl div strong{
+    font: 700 1.25rem 'Noto Sans KR', sans-serif;
+    color: #909090;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.bControl div strong:last-child{margin-right: 0rem;}
+.bControl a{
+    font: 400 .9375rem 'Noto Sans KR', sans-serif;
+    color: #666;
+    display: block;
+    text-decoration: underline;
+}
+.bNews{display: none;}
+.bNews li{margin-bottom: .625rem;}
+.bNews li:last-child{margin-bottom: 0rem;}
+.bNews li a{
+    display: flex;
+    justify-content: space-between;
+}
+.bText{
+    font: 500 .9375rem 'Noto Sans KR', sans-serif;
+    color: #000;
+}
+.bDate{
+    font: 400 .875rem 'Noto Sans KR', sans-serif;
+    color: #666;
+}
+.bText:hover{text-decoration: underline;}
+.bText::before{
+    content: '·';
+    display: inline;
+    margin-right: 5px;
+    font: 700 1rem 'Noto Sans KR', sans-serif;
+    cursor: default;
+}
+.bEvent{display: none;}
+.bEvent li{margin-bottom: .625rem;}
+.bEvent li a{
+    display: flex;
+    justify-content: space-between;
+}
+.activeBtn{color: #006ddf !important;}
+.activeList{
+    display: block;
+    height: 7.5rem;
+}
+.appBox{
+    box-sizing: border-box;
+    width: 28.5rem;
+    padding: 3.75rem;
+    background-color: #fff;
+    border-radius: 1.5625rem;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+.appTitle{
+    font: 700 1.25rem 'Noto Sans KR', sans-serif;
+    color: #07172a;
+}
+.appBox ul{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+}
+.appBox ul li{}
+.appBox ul li a{}
+.appBox ul li a p{
+    font: 500 1rem 'Noto Sans KR', sans-serif;
+    color: #000;
+    text-align: center;
+}
+.bankApp{margin-left: .625rem;}
+.bankApp a{}
+.bankApp a p::before{
+    content: '';
+    display: block;
+    background: url(../img/sprite.png);
+    background-position: 0 -100px;
+    width: 90px; height: 90px;
+    padding-bottom: .625rem;
+}
+.bankApp a p{}
+.shopApp{}
+.shopApp a{}
+.shopApp a p::before{
+    content: '';
+    display: block;
+    background: url(../img/sprite.png);
+    background-position: -100px -100px;
+    width: 90px; height: 90px;
+    padding-bottom: .625rem;
+}
+.shopApp a p{}
+.corpApp{margin-right: .625rem;}
+.corpApp a{}
+.corpApp a p::before{
+    content: '';
+    display: block;
+    background: url(../img/sprite.png);
+    background-position: -200px -100px;
+    width: 90px; height: 90px;
+    padding-bottom: .625rem;
+}
+.corpApp a p{}
+
+
+
+/* ---------- footer - common ---------- */
+#footer{
+    margin: 1.25rem 0 0 0;
+    padding: 2.5rem 0;
+    border-top: solid .0625rem #e1e1e1;
+}
+.footerInner{}
+.lineOne{
+    display: flex;
+    justify-content: space-between;
+}
+.lineLeft{}
+.lineLeft span{margin-right: .9375rem;}
+.lineLeft span:last-child{margin-right: 0rem;}
+.lineLeft span a{
+    font: 500 .875rem 'Noto Sans KR', sans-serif;
+    color: #42464a;
+    line-height: 2.25rem;
+}
+.lineRight{display: flex;}
+.lineRight>div{margin-left: 10px;}
+.snsTab{
+    width: 6.875rem;
+    position: relative;
+}
+.snsTab button{
+    border: none;
+    background: none;
+    padding: 0;
+    width: 100%; height: 2.25rem;
+    line-height: 2.25rem;
+    padding: 0 2rem 0 1rem;
+    text-align: left;
+    font: 500 .8125rem 'Noto Sans KR', sans-serif;
+    color: #42464a;
+    position: relative;
+    cursor: pointer;
+}
+.snsTab button::after{
+    content: '';
+    position: absolute;
+    top: 50%; right: 10px;
+    transform: translateY(-50%);
+    background: url(../img/sprite.png) no-repeat;
+    background-position: -90px 0;
+    width: 12px; height: 6px;
+}
+.snsTabPopup{
+    position: absolute;
+    top: -87px; left: 0;
+    width: 110px;
+    display: none;
+    border: 1px solid #d1d1d1;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 8px 0 0 0;
+}
+.snsTabPopup li{}
+.snsTabPopup li a{
+    display: block;
+    height: 26px;
+    line-height: 26px !important;
+    padding: 0 16px;
+    font: 500 .8125rem 'Noto Sans KR', sans-serif;
+    color: #42464a;
+}
+.snsTabPopup li a:hover{text-decoration: underline;}
+.snsTab.active button{
+    border: 1px solid #d1d1d1;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    border-top: none;
+}
+.snsTab.active button::after{transform: translateY(-50%) rotate(180deg);}
+.snsTab.active .snsTabPopup{display: block;}
+.groupTab{
+    width: 8.25rem;
+    position: relative;
+}
+.groupTab button{
+    border: none;
+    background: none;
+    padding: 0;
+    width: 100%; height: 2.25rem;
+    line-height: 2.25rem;
+    padding: 0 2rem 0 1rem;
+    text-align: left;
+    font: 500 .8125rem 'Noto Sans KR', sans-serif;
+    color: #42464a;
+    position: relative;
+    cursor: pointer;
+}
+.groupTab button::after{
+    content: '';
+    position: absolute;
+    top: 50%; right: 10px;
+    transform: translateY(-50%);
+    background: url(../img/sprite.png) no-repeat;
+    background-position: -90px 0;
+    width: 12px; height: 6px;
+}
+.groupTabPopup{
+    position: absolute;
+    top: -295px; left: 0;
+    width: 132px;
+    display: none;
+    border: 1px solid #d1d1d1;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 8px 0 0 0;
+}
+.groupTabPopup li{}
+.groupTabPopup li a{
+    display: block;
+    height: 26px;
+    line-height: 26px !important;
+    padding: 0 16px;
+    font: 500 .8125rem 'Noto Sans KR', sans-serif;
+    color: #42464a;
+    white-space: nowrap;
+}
+.groupTabPopup li a:hover{text-decoration: underline;}
+.groupTab.active button{
+    border: 1px solid #d1d1d1;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    border-top: none;
+}
+.groupTab.active button::after{transform: translateY(-50%) rotate(180deg);}
+.groupTab.active .groupTabPopup{display: block;}
+.familyTab{
+    width: 11.125rem;
+    position: relative;
+}
+.familyTab button{
+    border: none;
+    background: none;
+    padding: 0;
+    width: 100%; height: 2.25rem;
+    line-height: 2.25rem;
+    padding: 0 2rem 0 1rem;
+    text-align: left;
+    font: 500 .8125rem 'Noto Sans KR', sans-serif;
+    color: #42464a;
+    position: relative;
+    cursor: pointer;
+}
+.familyTab button::after{
+    content: '';
+    position: absolute;
+    top: 50%; right: 10px;
+    transform: translateY(-50%);
+    background: url(../img/sprite.png) no-repeat;
+    background-position: -90px 0;
+    width: 12px; height: 6px;
+}
+.familyTabPopup{
+    position: absolute;
+    top: -425px; left: 0;
+    width: 178px;
+    display: none;
+    border: 1px solid #d1d1d1;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 8px 0 0 0;
+}
+.familyTabPopup li{}
+.familyTabPopup li a{
+    display: block;
+    height: 26px;
+    line-height: 26px !important;
+    padding: 0 16px;
+    font: 500 .8125rem 'Noto Sans KR', sans-serif;
+    color: #42464a;
+    white-space: nowrap;
+}
+.familyTabPopup li a:hover{text-decoration: underline;}
+.familyTab.active button{
+    border: 1px solid #d1d1d1;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    border-top: none;
+}
+.familyTab.active button::after{transform: translateY(-50%) rotate(180deg);}
+.familyTab.active .familyTabPopup{display: block;}
+.lineTwo{
+    height: 2.5rem;
+    position: relative;
+}
+.item{
+    width: 20rem; height: 3.75rem;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+    position: relative;
+    top: -.625rem; left: -1.25rem;
+}
+.lineTwo.active div.item{
+    border: solid 1px #d1d1d1;
+    border-radius: 0 0 8px 8px;
+    background-color: #fff;
+}
+.item h3{
+    display: inline;
+    font: 700 .9375rem 'Noto Sans KR', sans-serif;
+    color: #000;
+    margin-right: .625rem;
+    line-height: 3.75rem;
+}
+.item span{
+    font: 400 1.0625rem 'Noto Sans KR', sans-serif;
+    color: #006ddf;
+    line-height: 3.75rem;
+}
+.itemBtn{
+    border: none;
+    background: none;
+    padding: 0;
+    width: 30px; height: 30px;
+    position: absolute;
+    top: 50%; right: 1.25rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.itemBtn::before{
+    content: "";
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-40%, -50%);
+    background: url(../img/sprite.png) no-repeat;
+    background-position: -90px 0;
+    width: 12px; height: 6px;
+}
+.lineTwo.active .itemBtn::before{transform: translate(-60%, -50%) rotate(180deg);}
+.itemList{
+    position: absolute;
+    left: -20px; bottom: 49px;
+    border: solid 1px #d1d1d1;
+    border-radius: 8px 8px 0 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 100;
+    display: none;
+}
+.itemList .item{
+    width: 278px;
+    position: static;
+    margin: 0 1.25rem;
+    padding: 0;
+    border-top: solid 1px #d1d1d1;
+}
+.itemList .item:first-child{border: none;}
+.itemList .item h3{
+    display: inline-block;
+    width: 86px;
+    margin: 0 10px 0 0;
+} 
+.itemList .item span{display: inline-block;}
+.lineTwo.active .itemList{display: block;}
+.lineThr{display: flex;}
+.lineThr address{
+    font: 500 .8125rem 'Noto Sans KR', sans-serif;
+    color: #000;
+    line-height: 2.0625rem;
+}
+.lineThr a{
+    margin-left: .5rem;
+    font-size: 0;
+}
+.lineThr a img{}
